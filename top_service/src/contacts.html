@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include('html/head.html')
+</head>
+<body>
+
+    @@include('html/header.html')
+
+
+	<section class="hero hero__contacts">
+		<div class="container">
+			<div class="hero__top">
+				<h1 class="h2 wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+					Контакты
+				</h1>
+				<!-- /.h2 -->
+			</div>
+			<!-- /.hero__top -->
+			<div class="hero__contacts-list">
+				<div class="contacts__info wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
+					<div class="contacts__item">
+						<span>Адрес</span>
+						<p>
+							Российская Федерация, 141400, Московская обл., г. Химки, аэропорт Шереметьево, помещение 3, офис № 144
+						</p>
+					</div>
+					<div class="contacts__item">
+						<span>Написать</span>
+						<p>
+							<a href="mailto:info@smart-24.pro">info@smart-24.pro</a>
+						</p>
+					</div>
+					<div class="contacts__item">
+						<span>Позвонить нам</span>
+						<p>
+							<a href="tel:+7 495 198-01-88">+7 (495) 198-01-88</a>
+						</p>
+					</div>
+				</div>
+				<!-- /.contacts__info -->
+				<div class="contacts__call wow animate__fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+					<p>Обращение Генеральному директору</p>
+					<button class="btn btn__outline btn-call" data-modal="modal-dir">
+						<span>Написать</span>
+						<i>
+							<img width="24" height="24" class="lazy" data-src="assets/img/arr-w.svg" alt="">
+						</i>
+					</button>
+				</div>
+				<!-- /.contacts__call -->
+			</div>
+			<!-- /.hero__contacts-list -->
+			<div class="hero__map wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+				<div class="contacts__map" id="contacts__map1">
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2a0cb9134128cb2d18c9e1e6d0e3dda2299e510682f55993d77e11dd14af3ea7&amp;width=100%25&amp;height=711&amp;lang=ru_RU&amp;scroll=false"></script>
+				</div>
+				<!-- /#contacts__map.contacts__map -->
+			</div>
+			<!-- /.hero__map -->
+		</div>
+		<!-- /.container -->
+	</section>
+	<!-- /.hero -->
+
+
+	
+    @@include('html/footer.html')
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+</body>
+</html>

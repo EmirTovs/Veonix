@@ -1,0 +1,64 @@
+.pay {
+	padding: 100px 0;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #F8F8F8;
+	background-image: url('../img/pay/bg.svg');
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: 100% auto;
+	color: $text-color;
+	&__container {
+		max-width: 664px;
+	}
+	&__title {
+		margin-bottom: 20px;
+		font-family: "PT Mono";
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%;
+	}
+	&__subtitle {
+		margin-bottom: 20px;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 150%;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		li {
+			position: relative;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 150%;
+			counter-increment: list;
+			&::before {
+				content: counter(list, decimal-leading-zero);
+				position: absolute;
+				left: -15px;
+				top: 50%;
+				transform: translate(-100%, -50%);
+				width: 33px;
+				height: 33px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50px;
+				border: 1px solid $l-blue;
+				color: $l-blue;
+				font-family: 'Fearce';
+				font-size: 9px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 120%;
+			}
+		}
+	}
+}

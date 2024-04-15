@@ -1,0 +1,22 @@
+.footer {
+	padding-bottom: 50px;
+	&__row {
+		margin: 0px -20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 30px;
+	}
+	&__logo {
+		position: static;
+		transform: translate(0, 0);
+		img {
+			width: 181px;
+			height: 54px;
+		}
+	}
+	a {
+		font-size: 20px;
+	}
+}

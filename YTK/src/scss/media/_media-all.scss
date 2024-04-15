@@ -1,0 +1,336 @@
+
+.container {
+	padding: 0px;
+	max-width: 90%;
+}
+
+.btn {
+	padding: 20px 20px 18px;
+	gap: 12px;
+	font-size: 27.2px;
+	img {
+		margin-top: -3px;
+		width: 30px;
+		height: 29px;
+	}
+}
+
+* {
+	// outline: auto;
+}
+.progress {
+	max-width: 160px;
+}
+
+.section {
+	&-title {
+		margin-bottom: 50px;
+		font-size: 47.6px;
+		&.proff {
+			margin-bottom: 60px;
+		}
+		&.star {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.bg {
+	&__video {
+		top: 10px;
+		max-width: calc(95% + 20px);
+	}
+}
+
+input {
+	border-radius: 0px;
+	font-size: 25px;
+}
+
+textarea {
+	min-height: 120px;
+	font-size: 25px;
+}
+
+.page {
+	&-inner {
+		padding-top: 150px;
+	}
+}
+
+.label {
+	&__textarea {
+		margin-bottom: 50px;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		font-size: 25px;
+	}
+	&__check {
+		cursor: pointer;
+		input {
+			&:checked + span {
+				padding: 3px;
+				background-clip: content-box;
+				background-color: $accent;
+			}
+		}
+		span {
+			display: flex;
+			width: 25px;
+			height: 25px;
+			border: 1px solid #fff;
+			border-radius: 4px;
+		}
+	}
+}
+
+.breadcrumb {
+	display: none;
+}
+
+.pagination {
+	padding-top: 60px;
+	gap: 44px;
+	& > * {
+		display: none !important;
+	}
+	&__num {
+		display: flex !important;
+		gap: 40px;
+	}
+	a {
+		gap: 20px;
+		font-size: 35px;
+		i {
+			display: flex;
+		}
+		img {
+			width: 24px;
+			height: 20px;
+		}
+	}
+}
+
+.form {
+	margin-left: auto;
+	max-width: 621px;
+	&__title {
+		margin-bottom: 35px;
+		font-size: 35px;
+		text-align: left;
+		small {
+			font-size: 18px;
+		}
+	}
+	&__items {
+		margin-bottom: 45px;
+		align-items: flex-start;
+		gap: 45px;
+		width: 100%;
+		flex-direction: column;
+	}
+	&__name {
+		width: 100%;
+		max-width: 100%;
+		&::placeholder {
+			font-style: italic;
+		}
+	}
+	&__email {
+		&::placeholder {
+			font-style: italic;
+		}
+	}
+	&__phone, &__email {
+		width: 100%;
+		max-width: 100%;
+	}
+	&__phone {
+		padding-bottom: 2px;
+		font-size: 25px;
+	}
+	&__btn {
+		padding: 15px 17px;
+		margin-bottom: 22px;
+		margin-left: auto;
+		width: 100%;
+		max-width: 100%;
+		font-size: 25px;
+		line-height: 1;
+		gap: 14px;
+		justify-content: center;
+		&:hover {
+			img {
+				filter: $filter-accent;
+			}
+		}
+	}
+	&__politic {
+		padding-top: 20px;
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		gap: 20px;
+		color: #fff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 1;
+		a {
+			display: block;
+			text-decoration: underline;
+		}
+	}
+}
+
+
+.sub {
+	
+	& > span {
+		position: relative;
+		&::before {
+			width: 15px;
+			height: 30px;
+			background-image: url('../../img/header-arr.svg') !important;
+		}
+	}
+}
+
+.modal {
+	&-menu {
+		.modal {
+			&__content {
+				width: calc(100% - 90px);
+				.header {
+					position: relative;
+					&__phone {
+						&::before {
+							background-image: url('../../img/phone.svg') !important;
+						}
+					}
+				}
+				.container {
+					max-width: 90%;
+					height: calc(100% - 114px);
+				}
+			}
+		}
+	}
+	&__close {
+		top: 30px;
+		width: 34px;
+		height: 34px;
+	}
+}
+
+
+
+.follow {
+	margin-top: 60px;
+	margin-bottom: 100px;
+	padding: 53px;
+	align-items: flex-start;
+	flex-direction: column;
+	border-radius: 15px;
+	&__title {
+		margin-bottom: 37px;
+		font-size: 36px;
+	}
+	&__info {
+		margin-bottom: 30px;
+		max-width: 100%;
+		font-size: 28.8px;
+	}
+	&__btn {
+		width: 100%;
+		max-width: 100%;
+		justify-content: center;
+		i {
+			display: flex;
+		}
+		img {
+			width: 24px;
+			height: 25px;
+		}
+	}
+}
+
+.next {
+	&__item {
+		margin-bottom: 50px;
+		padding-top: 34px;
+		font-size: 28px;
+		a {
+			gap: 20px;
+			i {
+				img {
+					width: 24px;
+					height: 20px;
+				}
+			}
+		}
+	}
+}
+
+.author {
+	margin-bottom: 53px;
+	&__list {
+		gap: 35px;
+		font-size: 28px;
+	}
+	&__img {
+		img {
+			width: 137px;
+			height: 137px;
+			border-radius: 137px;
+		}
+	}
+}
+
+.content {
+	max-width: 100%;
+	h1 {
+		margin-bottom: 60px;
+		font-size: 36px;
+	}
+	p {
+		margin-bottom: 35px;
+		font-size: 28px;
+	}
+	img {
+		margin-bottom: 35px;
+		border-radius: 20px;
+	}
+	iframe {
+		margin-top: 21px;
+		margin-bottom: 35px;
+		height: 350px;
+		border-radius: 20px;
+	}
+	.blog {
+		&__tags {
+			margin-top: 35px;
+		}
+	}
+	a, span {
+		font-size: 28px;
+	}
+}
+
+.recommended {
+	padding: 150px 0;
+	&__top {
+		margin-bottom: 54px;
+		align-items: flex-start;
+		flex-direction: column;
+		&-item {
+			display: none;
+		}
+	}
+	.blog {
+		&__item {
+			max-width: 90%;
+		}
+	}
+}

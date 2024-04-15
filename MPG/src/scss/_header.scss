@@ -1,0 +1,141 @@
+.header {
+	position: fixed;
+	left: 0;
+	top: 0px;
+	padding-top: 20px;
+	width: 100%;
+	z-index: 9;
+	&.active {
+		.header {
+			&__mob {
+				max-height: 0px;
+			}
+		}
+	}
+	&__burger {
+		display: none;
+		flex-direction: column;
+		gap: 4px;
+		width: 20px;
+		cursor: pointer;
+		span {
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+			transition: all .3s;
+			border-radius: 2px;
+			&:first-child {
+				max-width: 12px;
+			}
+			&:last-child {
+				max-width: 12px;
+				margin-left: auto;
+			}
+		}
+	}
+	&__row {
+		padding: 20px 30px;
+		border-radius: 10px;
+		background-color: #10171B;
+		box-shadow: 0px 4px 10px 0px rgba(21, 67, 52, 0.05);
+		backdrop-filter: blur(4px);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		transition: all .3s;
+	}
+	&__menu {
+		display: flex;
+		align-items: center;
+		gap: 60px;
+		a {
+			position: relative;
+			color: #fff;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			font-family: "Actay";
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -13px;
+				width: 0px;
+				height: 1px;
+				border-radius: 2px;
+				background-color: $green;
+				transition: all .3s;
+				opacity: 0;
+				pointer-events: none;
+			}
+			span {
+				transition: all .3s;
+				pointer-events: none;
+				&:last-child {
+					position: absolute;
+					left: 0;
+					transform: translate(-0%, 4%);
+					opacity: 0;
+					font-weight: 700;
+					white-space: nowrap;
+					color: $green;
+				}
+			}
+			&:hover {
+				&::before {
+					opacity: 1;
+					width: 25px;
+				}
+				span {
+					&:first-child {
+						opacity: 0;
+					}
+					&:last-child {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	&__logo {
+
+		img {
+			width: 164px;
+			height: 45px;
+			pointer-events: none;
+		}
+	}
+	&__phones {
+		margin-bottom: 35px;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+	&__phone {
+		position: relative;
+		padding-left: 35px;
+		font-family: "Actay";
+		font-weight: 700;
+		color: #fff;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 20px;
+			height: 20px;
+			background-image: url("../img/phone.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+	}
+	&__mob {
+		display: none;
+		max-height: 0px;
+		transition: all .3s;
+		overflow: hidden;
+	}
+}

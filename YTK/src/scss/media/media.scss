@@ -1,0 +1,21 @@
+@media only screen and (max-width: 680px) {
+	
+	@import '../all';
+	@import '../header';
+	@import '../home';
+	@import '../carier';
+	@import '../about';
+	@import '../footer';
+	
+	
+	@import 'media-all';
+	@import 'media-header';
+	@import 'media-footer';
+	@import 'media-home';
+	@import 'media-about';
+	@import 'media-carier';
+	@import 'media-raitings';
+	@import 'media-blog';
+	@import 'media-press';
+
+}

@@ -1,0 +1,72 @@
+.footer {
+	padding: 50px 0px 25px;
+	&__row {
+		margin-bottom: 30px;
+		flex-direction: column;
+		gap: 30px;
+		& > * {
+			max-width: 100%;
+		}
+	}
+	&__cont {
+		display: flex;
+		flex-direction: column;
+	}
+	&__logo {
+		margin-bottom: 30px;
+		img {
+			width: 190px;
+			height: 15px;
+		}
+	}
+	&__mail {
+		margin-bottom: 19px;
+		padding-bottom: 8px;
+	}
+	&__tg {
+		gap: 10px;
+		span {
+			padding-bottom: 8px;
+		}
+		img {
+			width: 16px;
+			height: 14px;
+		}
+	}
+	&__menu {
+		gap: 20px;
+		li {
+			max-width: calc(50% - 10px);
+			min-width: 103px;
+		}
+		a {
+			font-size: 16px;
+		}
+	}
+	&__right {
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+	}
+	&__btn {
+		padding: 15px;
+		width: 100%;
+		max-width: 100%;
+	}
+	&__bottom {
+		padding-top: 30px;
+		flex-wrap: wrap;
+		gap: 20px 10px;
+		font-size: 12px;
+		& > * {
+			max-width: calc((100% - 10px) / 2);
+			&:last-child {
+				justify-content: flex-start;
+			}
+			&:nth-child(2n) {
+				display: flex;
+				justify-content: flex-end;
+			}
+		}
+	}
+}

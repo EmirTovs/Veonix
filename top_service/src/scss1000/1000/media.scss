@@ -1,0 +1,20 @@
+
+$blue: #1460F0;
+$blue-hover: #0C4CC7;
+$dark-blue: #2D3446;
+$black: #041C2C;
+$gray: #D9D9D9;
+
+$filter-blue: brightness(0) saturate(100%) invert(25%) sepia(97%) saturate(2022%) hue-rotate(212deg) brightness(95%) contrast(99%);
+$filter-dark-blue: brightness(0) saturate(100%) invert(15%) sepia(11%) saturate(1847%) hue-rotate(185deg) brightness(91%) contrast(83%);
+
+
+@media (max-width: 1000px) {
+
+	@import 'media-all';
+	@import 'media-header';
+	@import 'media-footer';
+	@import 'media-home';
+	@import 'media-news';
+
+}

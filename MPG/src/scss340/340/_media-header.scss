@@ -1,0 +1,108 @@
+.header {
+	padding-top: 16px;
+	&.active {
+		.header {
+			&__row {
+				row-gap: 34px;
+			}
+			&__mob {
+				max-height: 1000px;
+			}
+		}
+	}
+	&__row {
+		padding: 18px 15px;
+		flex-wrap: wrap;
+		gap: 0px;
+		border-radius: 10px;
+		box-shadow: 0px 4px 10px 0px rgba(21, 67, 52, 0.05);
+		backdrop-filter: blur(4px);
+	}
+	&__burger {
+		display: flex;
+		gap: 4px;
+		width: 20px;
+		&.active {
+			span {
+				transform: rotate(-45deg);
+				background-color: $grey;
+				&:first-child {
+					transform: translate(1px, 2.9px) rotate(45deg);
+				}
+				&:last-child {
+					transform: translate(-1.5px, -2.9px) rotate(45deg);
+				}
+			}
+		}
+		span {
+			height: 2px;
+			border-radius: 2px;
+			&:first-child {
+				max-width: 12px;
+			}
+			&:last-child {
+				max-width: 12px;
+			}
+		}
+	}
+	&__menu {
+		display: none;
+		gap: 10px;
+		a {
+			font-size: 14px;
+			&::before {
+				bottom: -13px;
+			}
+			span {
+				&:last-child {
+					transform: translate(-0%, 4%);
+				}
+			}
+			&:hover {
+				&::before {
+					width: 25px;
+				}
+			}
+		}
+	}
+	&__logo {
+
+		img {
+			width: 87px;
+			height: 24px;
+			object-fit: contain;
+		}
+	}
+	&__btn {
+		margin-bottom: 5px;
+		width: 100%;
+	}
+	&__mob {
+		display: block;
+		width: 100%;
+		.header {
+			&__menu {
+				margin-bottom: 30px;
+				padding-bottom: 43px;
+				gap: 33px;
+				border-bottom: 1px solid #192228;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		}
+	}
+	&__phones {
+		margin-bottom: 30px;
+		flex-direction: column;
+		gap: 12px;
+	}
+	&__phone {
+		padding-left: 35px;
+		&::before {
+			top: 5px;
+			width: 18px;
+			height: 18px;
+		}
+	}
+}

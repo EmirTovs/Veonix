@@ -1,0 +1,47 @@
+
+
+.footer {
+	padding: 68px 0px 95px;
+	&__logo {
+		img {
+			width: 329px;
+		}
+	}
+	&__row {
+		margin-bottom: 100px;
+	}
+	&__big {
+		width: 100%;
+		max-width: 934px;
+	}
+	&__col {
+		width: 100%;
+		max-width: 340px;
+	}
+	&__cont {
+		margin-bottom: 37px;
+		font-size: 60px;
+	}
+	&__menu {
+		margin-left: 3px;
+		gap: 19px;
+		@include t16;
+	}
+	&__bottom {
+		max-width: 1168px;
+		@include t18;
+	}
+	&__item {
+		gap: 10px;
+		img {
+			width: 18px;
+			height: 18px;
+		}
+		&:last-child {
+			font-size: 16px;
+		}
+		&:first-child {
+			margin-right: 40px;
+		}
+	}
+}

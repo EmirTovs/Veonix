@@ -1,0 +1,45 @@
+.header {
+	top: 30px;
+	&.fixed {
+		top: 20px;
+	}
+	&__row {
+		justify-content: space-between;
+		padding: 15px 25px;
+		margin: 0px 0px;
+		width: 100%;
+		max-width: 100%;
+	}
+	&__logo {
+		display: flex;
+		img {
+			width: 250px;
+			height: auto;
+		}
+	}
+	&__burger {
+		display: flex;
+	}
+	.header {
+		&__center, &__links {
+			display: none;
+		}
+	}
+	&__menu {
+		display: flex;
+		align-items: center;
+		gap: 100px;
+		a {
+			position: relative;
+			font-size: 16px;
+			&::before {
+				background-image: url('../../img/line.svg');
+			}
+		}
+	}
+	&__links {
+		display: flex;
+		align-items: center;
+		gap: 13px;
+	}
+}

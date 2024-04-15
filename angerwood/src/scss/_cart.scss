@@ -1,0 +1,203 @@
+.cart {
+	padding-top: 242px;
+	padding-bottom: 185px;
+	min-height: 100vh;
+	background-color: #F8F8F8;
+	color: $text-color;
+	&__title {
+		margin-bottom: 38px;
+		font-family: "PT Mono";
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%;
+	}
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		gap: 20px;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		width: 100%;
+		max-width: 857px;
+	}
+	&__count {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		text-align: center;
+		font-family: "PT Mono";
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%;
+		&-minus, &-plus {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 20px;
+			width: 33px;
+			color: #ACB9BF;
+			background-color: #EEE;
+			text-align: center;
+			font-family: "PT Mono";
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%; 
+			border-radius: 3px;
+			transition: all .3s;
+			cursor: pointer;
+			&:hover {
+				color: #fff;
+				background-color: #0E1015;
+			}
+		}
+		&-items {
+			width: 34px;
+			text-align: center;
+		}
+	}
+	&__price {
+		min-width: 135px;
+		color: #0E1015;
+		font-family: "PT Mono";
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%;
+	}
+	&__item {
+		position: relative;
+		padding: 7px 15px;
+		padding-right: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #fff;
+		&-title {
+			display: flex;
+			flex-direction: column;
+			gap: 6px;
+			font-family: "PT Mono";
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%;
+			p {
+				font-family: "PT Sans";
+				font-size: 12px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 120%; 
+			}
+		}
+		&-remove {
+			position: absolute;
+			right: 15px;
+			top: 15px;
+			cursor: pointer;
+			* {
+				transition: all .3s;
+			}
+			&:hover {
+				svg {
+					path {
+						fill: $text-color;
+					}
+				}
+			}
+		}
+		&-info {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			max-width: 50%;
+			gap: 25px;
+		}
+		&-col {
+			display: flex;
+			align-items: center;
+			gap: 22px;
+		}
+	}
+	&__img {
+		width: 100%;
+		max-width: 80px;
+		min-height: 86px;
+	}
+	&__order {
+		padding: 25px;
+		width: 100%;
+		max-width: 401px;
+		color: #0E1015;
+		font-family: "PT Mono";
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%; 
+		background-color: #fff;
+		&-title {
+			margin-bottom: 10px;
+		}
+		&-price {
+			margin-bottom: 26px;
+			font-family: "PT Mono";
+			font-size: 34px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%;
+		}
+		&-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 75px;
+			width: 100%;
+			color: #FFF;
+			text-align: center;
+			font-family: "PT Mono";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%; 
+			cursor: pointer;
+			background-color: #0E1015;
+			border: 1px solid #0E1015;
+			transition: all .3s;
+			&:hover {
+				color: #0E1015;
+				background-color: transparent;
+			}
+			&.hide {
+				display: none;
+			}
+		}
+	}
+}
+
+.order {
+	.cart {
+		&__title {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+		}
+		&__list {
+			padding: 0px 45px;
+			gap: 0px;
+			background-color: #fff;
+		}
+		&__item {
+			padding: 25px 0;
+			border-bottom: 1px solid #ACB9BF;
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+}

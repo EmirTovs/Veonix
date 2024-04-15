@@ -1,0 +1,183 @@
+.news {
+	&__preview {
+		flex-direction: column;
+		width: 577px;
+		border-radius: 20px;
+	}
+	&__link {
+		justify-content: flex-start;
+	}
+	&__info {
+		padding: 30px 39px 40px;
+		max-width: 577px;
+		min-height: auto;
+		gap: 29px;
+		@include t16;
+	}
+	&__date {
+		justify-content: flex-start;
+		@include t16;
+	}
+	&__title {
+		@include t25;
+	}
+	&__tags {
+		flex-direction: column;
+		align-items: flex-end;
+		right: 21px;
+		top: 28px;
+		gap: 7px;
+		@include t18;
+		& > * {
+			padding: 10px 20px;
+			border-radius: 30px;
+		}
+	}
+	&__img {
+		position: static;
+		img:not(.logo) {
+			width: 577px;
+			min-height: 291px;
+			max-height: 219px;
+			border-radius: 20px;
+		}
+		.logo {
+			left: 54px;
+			top: 2px;
+			width: 98px;
+			height: 97px;
+		}
+	}
+}
+
+.post {
+	&__list {
+		padding: 30px 0px 65px;
+		gap: 30px;
+	}
+	&__item {
+		max-width: 100%;
+		.news {
+			&__tags {
+				left: 39px;
+				bottom: 24px;
+			}
+		}
+		.actual {
+			&__item {
+				&-img {
+					margin-bottom: 0;
+					min-height: 320px;
+				}
+				&-info {
+					padding: 60px 40px 40px;
+					padding-top: 30px;
+					@include t18;
+				}
+			}
+			&__title {
+				margin-bottom: 20px;
+				@include t25;
+			}
+			&__desc {
+				margin-bottom: 56px;
+			}
+		}
+	}
+	&-page {
+		padding-top: 159px;
+	}
+	&__preview {
+		max-height: 899px;
+		img {
+			width: 100%;
+			height: 360px;
+		}
+		&::before {
+			max-height: 929px;
+		}
+	}
+}
+
+.content {
+	padding-bottom: 240px;
+	.breadcrumb {
+		max-width: 580px;
+	}
+	h1 {
+		font-size: 30px;
+	}
+	&__top {
+		padding-top: 80px;
+		&-text {
+			padding: 60px 30px;
+			border-radius: 20px 20px 0px 0px;
+			gap: 18px;
+			@include t18;
+		}
+	}
+	&__time {
+		@include t14;
+	}
+	&__date {
+		@include t14;
+	}
+	&__desc {
+		max-width: 100%;
+	}
+	&__container {
+		padding: 40px 30px 0px;
+		max-width: 100%;
+		background-color: #fff;
+		@include t16;
+		& > * {
+			margin-bottom: 30px;
+		}
+		h3 {
+			@include t25;
+		}
+		h4 {
+			margin-bottom: 15px;
+			@include t25;
+		}
+		img {
+			width: 100%;
+			border-radius: 20px;
+		}
+		ul:not(.content__list) {
+			gap: 20px;
+			li {
+				padding-left: 55px;
+				&::before {
+					top: 9px;
+					width: 40px;
+					height: 2px;
+				}
+			}
+		}
+		ol {
+			gap: 70px;
+			li {
+				padding-left: 175px;
+				&::before {
+					@include t25;
+				}
+			}
+		}
+	}
+	&__list {
+		gap: 15px;
+		li {
+			padding-left: 30px;
+			&::before {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+	.news {
+		&__tags {
+			margin-bottom: 22px;
+		}
+	}
+}

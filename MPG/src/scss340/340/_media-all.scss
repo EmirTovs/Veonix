@@ -1,0 +1,104 @@
+$green: #4AB693;
+$grey: #C2C2C2;
+
+
+
+.container {
+	padding: 0px 20px;
+	max-width: 100%;
+}
+
+body {
+	font-size: 13px;
+}
+
+
+.section {
+	&__title {
+		margin-bottom: 30px;
+		font-size: 17px;
+	}
+}
+
+.btn {
+	padding: 14px 30px;
+	border-radius: 10px;
+	box-shadow: 0px 4px 10px 0px rgba(255, 255, 255, 0.05);
+	background: rgba(74, 182, 147, 0.90);
+	font-size: 16px;
+	&:hover {
+		box-shadow: 0px 2px 15px 0px rgba(255, 255, 255, 0.10) inset;
+	}
+}
+
+
+.cookies {
+	bottom: 30px;
+	left: 50%;
+	padding: 15px 20px;
+	border-radius: 10px;
+	max-width: calc(100% - 40px);
+	flex-direction: column;
+	font-size: inherit;
+	gap: 20px;
+	box-shadow: 0px 4px 10px 0px rgba(255, 255, 255, 0.05);
+	.btn {
+		width: 100%;
+	}
+}
+
+
+.modal {
+	backdrop-filter: blur(10px);
+	&__content {
+		padding: 50px 20px 20px;
+		max-width: calc(100% - 40px);
+		border-radius: 10px;
+	}
+	&__close {
+		right: 30px;
+		top: 30px;
+		img {
+			width: 20px;
+			height: 20px;
+		}
+	}
+	&__title {
+		margin-bottom: 20px;
+		font-size: 15px;
+	}
+	&__top {
+		margin-bottom: 20px;
+		line-height: 22px;
+	}
+
+}
+
+input:not([type="submit"]) {
+	padding: 12px 20px;
+	border-radius: 10px;
+	line-height: 22px;
+	font-size: 13px;
+}
+.form {
+	&__fields {
+		margin-bottom: 20px;
+		gap: 10px;
+	}
+	&__check {
+		margin-bottom: 20px;
+		font-size: 12px;
+		line-height: 1.2;
+		span {
+			padding-left: 30px;
+			&::before {
+				top: 0px;
+				width: 20px;
+				height: 20px;
+				border-radius: 5px;
+				background-size: 10px auto;
+			}
+		}
+	}
+}
+

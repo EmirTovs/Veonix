@@ -1,0 +1,178 @@
+.news {
+	&__preview {
+		width: 300px;
+		border-radius: 20px;
+	}
+	&__info {
+		padding: 30px 20px 40px;
+		max-width: 300px;
+		gap: 20px;
+		line-height: 1.2;
+		@include t16;
+	}
+	&__date {
+		@include t16;
+	}
+	&__title {
+		@include t18;
+	}
+	&__tags {
+		flex-direction: column;
+		align-items: flex-end;
+		right: 14px;
+		top: 16px;
+		gap: 7px;
+		@include t14;
+		& > * {
+			padding: 10px 22px;
+			border-radius: 30px;
+		}
+	}
+	&__img {
+		img:not(.logo) {
+			width: 299.99999px;
+			min-height: 220px;
+			border-radius: 20px;
+		}
+		.logo {
+			left: 40px;
+			top: 2.00002px;
+			width: 59px;
+			height: 55px;
+		}
+	}
+	&__link {
+		justify-content: flex-start;
+	}
+}
+
+.post {
+	&__list {
+		padding: 30px 0px 55px;
+		gap: 20px;
+	}
+	&__item {
+		.news {
+			&__tags {
+				left: 16px;
+				bottom: 15px;
+				& > * {
+					padding: 5.5px 15px;
+				}
+			}
+		}
+		.actual {
+			&__item {
+				&-img {
+					margin-bottom: 0;
+					min-height: 180px;
+				}
+				&-info {
+					padding: 30px 20px 40px;
+					@include t14;
+				}
+				&-bottom {
+					flex-direction: column;
+					gap: 20px;
+					align-items: flex-start;
+				}
+			}
+			&__title {
+				margin-bottom: 20px;
+				@include t18;
+			}
+			&__desc {
+				margin-bottom: 40px;
+			}
+		}
+	}
+	&-page {
+		padding-top: 96.99999px;
+	}
+	&__preview {
+		max-height: 898.99998px;
+		img {
+			height: 320px;
+		}
+		&::before {
+			max-height: 928.99999px;
+		}
+	}
+}
+
+.content {
+	padding-bottom: 60px;
+	.breadcrumb {
+		max-width: 299.99999px;
+	}
+	h1 {
+		font-size: 25px;
+	}
+	&__top {
+		padding-top: 79.99999px;
+		&-text {
+			padding: 44px 20px;
+			border-radius: 20px 20px 0px 0px;
+			gap: 18px;
+			@include t18;
+		}
+	}
+	&__time {
+		@include t14;
+	}
+	&__date {
+		@include t14;
+	}
+	&__container {
+		padding: 30px 20px 0px;
+		@include t16;
+		& > * {
+			margin-bottom: 30px;
+		}
+		h3 {
+			@include t25;
+		}
+		h4 {
+			margin-bottom: 14.99998px;
+			@include t25;
+		}
+		img {
+			border-radius: 20px;
+		}
+		ul:not(.content__list) {
+			gap: 20px;
+			li {
+				padding-left: 55px;
+				&::before {
+					top: 9px;
+					width: 40px;
+				}
+			}
+		}
+		ol {
+			gap: 70.00002px;
+			li {
+				padding-top: 48px;
+				padding-left: 0px;
+				&::before {
+					@include t25;
+				}
+			}
+		}
+	}
+	&__list {
+		gap: 14.99998px;
+		li {
+			padding-left: 30px;
+			&::before {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+	.news {
+		&__tags {
+			margin-bottom: 27px;
+		}
+	}
+}

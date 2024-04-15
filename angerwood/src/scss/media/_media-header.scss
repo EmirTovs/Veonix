@@ -1,0 +1,72 @@
+.header {
+	padding: 40px 0;
+	&.fixed {
+		padding: 30px 0;
+	}
+	&.menu-show {
+		.header {
+			&__menu {
+				display: none;
+			}
+			&__burger {
+				display: flex;
+				span {
+					background-color: $text-color;
+				}
+			}
+		}
+	}
+	&__menu {
+		display: none;
+	}
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+	}
+	&__items {
+		display: flex;
+		align-items: center;
+		gap: 45px;
+		pointer-events: all;
+	}
+	&__logo {
+		svg {
+			max-width: 280px;
+			max-height: none;
+		}
+	}
+	&__cart {
+		display: flex;
+		cursor: pointer;
+		svg {
+			max-width: 25px;
+			max-height: 25px;
+		}
+	}
+	&__burger {
+		width: 60px;
+		height: 15px;
+		&.active {
+			span {
+				&:first-child {
+					transform: translate(0px, 8px) rotate(-45deg);
+				}
+			}
+		}
+	}
+}
+
+
+.home {
+	.header {
+		&.menu-show {
+			.header {
+				&__burger {
+					display: flex;
+				}
+			}
+		}
+	}
+}

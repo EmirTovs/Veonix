@@ -1,0 +1,92 @@
+
+body {
+	font-size: 14px;
+}
+
+.section {
+	&__title {
+		margin-bottom: 30px;
+		font-size: 25px;
+	}
+}
+
+.btn {
+	padding: 15px 30px;
+	transition: all .3s;
+	font-size: 14px;
+	&__mini {
+		padding: 12.1px 17px;
+		max-width: 100%;
+	}
+}
+
+.slider {
+	&__arrow {
+		display: none;
+	}
+}
+
+.container {
+	padding: 0px 20px;
+	max-width: 100%;
+}
+
+.input, input:not([type="submit"]), textarea {
+	padding: 0px 0px 15px;
+	font-size: 14px;
+	&::placeholder {
+		font-size: 14px;
+	}
+}
+
+
+.spinner {
+	width: 59px;
+	height: 50px;
+	&__kv {
+		width: 59px;
+		height: 50px;
+	}
+	&__x {
+		width: 36px;
+		height: 25px;
+	}
+  }
+
+
+  .modal {
+	backdrop-filter: blur(25px);
+	&__success {
+		.modal {
+			&__content {
+				max-height: 250px;
+				max-width: 90%;
+			}
+			&__btn {
+				width: 100%;
+			}
+		}
+	}
+	&__close {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+	&__content {
+		padding: 50px 20px;
+		max-width: 80%;
+	}
+	&__logo {
+		margin-bottom: 60px;
+		img {
+			width: 190px;
+			height: 15px;
+		}
+	}
+	&__menu {
+		gap: 20px;
+		a {
+			font-size: 20px;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.header {
+	padding: 36px 0;
+	&.fixed {
+		padding: 10px 0;
+		
+	}
+	&__logo {
+		img {
+			width: 144px;
+			height: 32px;
+		}
+	}
+	&__burger {
+		margin-left: -6.99999px;
+		width: 40px;
+		height: 31px;
+		span {
+			height: 3px;
+		}
+	}
+}

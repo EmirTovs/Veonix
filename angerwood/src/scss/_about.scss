@@ -1,0 +1,132 @@
+.about {
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		pointer-events: none;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__mq {
+		position: absolute;
+		left: 0;
+		bottom: -7px;
+		// width: 100%;
+		height: auto;
+		z-index: -1;
+		display: flex;
+		img, svg {
+			max-width: none;
+			width: auto;
+			height: 204px;
+		}
+		svg {
+			path {
+				fill: transparent;
+			}
+			* {
+				transition: all .5s;
+			}
+		}
+		&.active {
+			svg {
+				g {
+					opacity: 1;
+				}
+				path {
+					fill: #fff;
+				}
+			}
+		}
+	}
+	&__container {
+		margin: 0 auto;
+		max-width: 663px;
+	}
+	&__slider {
+		width: 100%;
+	}
+	&__slide {
+		position: relative;
+		// min-height: 100vh;
+		// height: auto;
+		width: 100%;
+		flex-direction: column;
+		align-items: flex-start;
+		color: $text-color;
+		overflow: hidden;
+		&.text-white {
+			color: #fff;
+		}
+		&-bg {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: auto;
+			pointer-events: none;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		&-second {
+			
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 150%;
+			p:not([class]) {
+				font-family: "PT Mono";
+			}
+		}
+
+	}
+	&__info {
+		margin-bottom: 65px;
+		display: flex;
+		align-items: center;
+		gap: 45px;
+		font-family: "PT Sans";
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 150%;
+	}
+	&__inner {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 150%;
+		.about {
+			&__img {
+				min-width: 163px;
+				img {
+					width: 163px;
+					height: 163px;
+					border-radius: 163px;
+				}
+			}
+		}
+		p {
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+$gradient: linear-gradient(90deg, #56CBF9 0%, #FFF 100%);
+$birz: #56CBF9;
+
+
+@media (max-width: 680px) {
+
+	@import 'media-all';
+	@import 'media-header';
+	@import 'media-footer';
+	@import 'media-home';
+
+}

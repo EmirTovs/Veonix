@@ -1,0 +1,57 @@
+
+
+.footer {
+	position: relative;
+	padding: 41px 0 36px;
+	overflow: hidden;
+	&__logo {
+		img {
+			width: 207px;
+		}
+	}
+	&__row {
+		margin-bottom: 56px;
+		gap: 30px;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	&__big {
+		max-width: 271px;
+	}
+	&__col {
+		max-width: 218px;
+	}
+	&__cont {
+		margin-bottom: 40px;
+		font-size: 32px;
+	}
+	&__menu {
+		margin-left: 1.87501px;
+		gap: 7px;
+		@include t16;
+	}
+	&__top {
+		margin-bottom: 40px;
+	}
+	&__bottom {
+		max-width: 100%;
+		@include t14;
+	}
+	&__item {
+		gap: 6.24998px;
+		width: 50%;
+		img {
+			width: 12px;
+			height: 12px;
+		}
+		&:last-child {
+			position: absolute;
+			left: 52%;
+			bottom: 100px;
+			font-size: 14px;
+		}
+		&:first-child {
+			margin-right: 0;
+		}
+	}
+}

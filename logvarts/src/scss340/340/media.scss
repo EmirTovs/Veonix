@@ -1,0 +1,16 @@
+$gradient: linear-gradient(135deg, #FFB318 0%, #FF921E 100%);
+$text-color: #3B405A;
+$blue: #628EDB;
+$orange: #FFB318;
+$pink: #FF83B7;
+
+
+
+@media (max-width: 680px) {
+
+	@import 'media-all';
+	@import 'media-header';
+	@import 'media-footer';
+	@import 'media-home';
+
+}

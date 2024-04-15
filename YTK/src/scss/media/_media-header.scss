@@ -1,0 +1,88 @@
+
+
+.header {
+	position: fixed;
+	padding: 30px 0px 15px;
+	transition: all .3s;
+	.container {
+		position: relative;
+	}
+	&.fixed {
+		padding-top: 15px;
+		background-color: rgba(0, 0, 0, 0.46);
+		backdrop-filter: blur(27.200000762939453px);
+	}
+	&__row {
+		gap: 30px;
+	}
+	&__burger {
+		display: flex !important;
+		width: 65px;
+		max-width: 65px;
+	}
+	&__btns {
+		display: none;
+	}
+	
+	&__bottom {
+		display: none;
+	}
+	&__top {
+		justify-content: flex-end;
+	}
+	&__contacts {
+		a {
+			font-size: 0px;
+			&.header__phone {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 70px;
+				height: 70px;
+				border-radius: 8px;
+				border: 1px solid $accent;
+				background-color: $accent;
+				&::before {
+					content: '';
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					width: 30px;
+					height: 30px;
+					transform: translate(-50%, -50%);
+					background-image: url('../../img/phone.svg');
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: 30px;
+					filter: $filter-blue;
+					transition: all .3s;
+				}
+				&:hover {
+					background-color: transparent;
+					&::before {
+						filter: $filter-accent;
+					}
+				}
+			}
+		}
+	}
+	&__info {
+		max-width: 90px;
+	}
+	&__logo {
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		gap: 15px;
+		max-width: 320px;
+		max-height: none;
+		font-size: 16px;
+		line-height: 1.2;
+		span {
+			max-width: 150px;
+		}
+		img {
+			max-width: 150px;
+		}
+	}
+}

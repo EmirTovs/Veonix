@@ -1,0 +1,36 @@
+.pay {
+	padding: 100px 0;
+	background-size: auto 200px;
+	&__container {
+		max-width: 90%;
+	}
+	&__title {
+		margin-bottom: 30px;
+		font-size: 40px;
+	}
+	&__subtitle {
+		margin-bottom: 30px;
+		font-size: 28px;
+	}
+	&__list {
+		gap: 30px;
+		li {
+			position: relative;
+			padding-left: 60px;
+			font-size: 28px;
+			&::before {
+				content: counter(list, decimal-leading-zero);
+				position: absolute;
+				left: 0px;
+				top: 10px;
+				transform: translate(0%, 0%);
+				border: none;
+				width: auto;
+				min-width: 25px;
+				height: auto;
+				font-size: 18px;
+				text-align: center;
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+.header {
+	padding: 49px 0;
+	&.fixed {
+		padding: 15px 0;
+		
+	}
+	&__logo {
+		margin-right: 0px;
+		img {
+			width: 205px;
+			height: 46px;
+		}
+	}
+	&__menu {
+		margin-left: -10px;
+		gap: 39px;
+		a {
+			@include t16;
+		}
+	}
+	&__contacts {
+		margin-right: 0px;
+		margin-left: 0px;
+		gap: 40px;
+	}
+	&__phone {
+		@include t16;
+	}
+	
+}

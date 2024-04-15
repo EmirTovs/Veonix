@@ -1,0 +1,273 @@
+
+@mixin text-default {
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+}
+
+@mixin text-800 {
+	font-style: normal;
+	font-weight: 800;
+	line-height: normal;
+}
+
+@mixin t16 {
+	font-size: 16px;
+	@include text-default;
+}
+
+@mixin t18 {
+	font-size: 18px;
+	@include text-default;
+}
+
+@mixin t20 {
+	font-size: 20px;
+	@include text-800;
+}
+
+@mixin t24 {
+	font-size: 24px;
+	@include text-800;
+}
+
+
+@mixin t40 {
+	font-size: 40px;
+	@include text-default;
+}
+
+@mixin t70 {
+	font-size: 70px;
+	@include text-800;
+}
+
+body {
+	font-size: 16px;
+}
+
+.container {
+	margin: auto;
+	padding: 0px 20px;
+	max-width: 100%;
+	&__big {
+		max-width: 100%;
+	}
+}
+
+.btn {
+	padding: 10px 20px;
+	border-radius: 50px;
+	font-size: 24px;
+	img {
+		width: 30px;
+		height: 30px;
+	}
+	&__call {
+		padding: 15px 30px;
+		justify-content: center;
+		width: 100%;
+		gap: 35px;
+	}
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	.icon {
+		padding: 12px;
+		border: 1px solid $blue;
+		border-radius: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			width: 24px;
+			height: 24px;
+			object-fit: contain;
+		}
+	}
+}
+
+.section {
+	&__title {
+		position: relative;
+		margin-bottom: 30px;
+		@include t40;
+	}
+}
+
+.modal {
+	backdrop-filter: blur(2px);
+	
+	&__success {
+		.modal {
+			&__content {
+				max-width: calc(100% - 20px);
+				background-size: 100% 150px;
+			}
+			&__btn {
+				height: 55px;
+				width: 100%;
+				font-size: 18px;
+			}
+		}
+	}
+	&__content {
+		padding: 50px 20px 30px;
+		max-width: 90%;
+		background-size: 100% 500px;
+		background-position: bottom -10px center;
+		border-radius: 20px;
+	}
+	&__close {
+		right: 10px;
+		top: 10px;
+		img {
+			width: 36px;
+			height: 36px;
+		}
+	}
+	h2 {
+		margin: 0 auto 30px;
+		max-width: 100%;
+		font-size: 20px;
+		letter-spacing: 0.96px;
+	}
+}
+
+
+
+.form {
+	max-width: 100%;
+	&__input {
+		padding: 32px 18px 18px;
+		padding-right: 40px;
+		font-size: 16px;
+		line-height: 1.3;
+		letter-spacing: 0.6px;
+		border-radius: 20px;
+		border: 2px solid transparent;
+		box-shadow: 0px 4px 16.3px 0px rgba(0, 0, 0, 0.07);
+		&:focus {
+			& + span:not([class]) {
+				top: 10px;
+			}
+		}
+		&.active {
+			& + span:not([class]) {
+				top: 10px;
+			}
+		}
+	}
+	&__label {
+		margin-bottom: 20px;
+		span:not([class]) {
+			top: 50%;
+			left: 20px;
+			line-height: 1.3; 
+		}
+		.reset {
+			right: 18px;
+			top: 50%;
+			transform: translateY(-50%);
+			img {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+	&__submit {
+		padding-top: 16px;
+		gap: 10px;
+	}
+	&__btn {
+		height: 50px;
+		max-width: 100%;
+		font-size: 16px;
+	}
+	&__polityc {
+		height: 48px;
+		gap: 15px;
+		font-size: 14px;
+		text-align: left;
+		span {
+			min-width: 28px;
+			min-height: 28px;
+			border-radius: 5px;
+			box-shadow: 0px 4px 16.3px 0px rgba(0, 0, 0, 0.07);
+		}
+	}
+	&__ask {
+		&-top {
+			margin: 0px auto -20px;
+			padding: 10px 20px;
+			max-width: 90%;
+			border-radius: 20px;
+			box-shadow: 0px 4px 16.3px 0px rgba(0, 0, 0, 0.07);
+			font-size: 16px;
+		}
+		&-body {
+			margin-bottom: 15px;
+			padding: 50px 10px 30px;
+			gap: 15px;
+			border-radius: 20px;
+			box-shadow: 0px 4px 16.3px 0px rgba(0, 0, 0, 0.07);
+			font-size: 13px;
+			line-height: 1.3;
+			letter-spacing: 0.6px;
+		}
+		&-title {
+			font-size: 15px;
+			line-height: 1.3; 
+			letter-spacing: 0.72px;
+		}
+	}
+	&__radio {
+		margin-bottom: 15px;
+		p {
+			padding: 15px 20px;
+			border-radius: 20px;
+			box-shadow: 0px 4px 16.3px 0px rgba(0, 0, 0, 0.07);
+			gap: 15px;
+			font-size: 18px;
+		}
+		.var {
+			width: 38px;
+			height: 38px;
+			border-radius: 48px;
+			font-size: 20px;
+			letter-spacing: 0.96px;
+			&::before {
+				left: -8px;
+				top: -8px;
+				width: 54px;
+				height: 54px;
+				border-radius: 64px;
+			}
+		}
+	}
+	&__steps {
+		.form {
+			&__polityc {
+				margin-bottom: 15px;
+			}
+			&__bottom {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 28px;
+			}
+		}
+	}
+}
+
+
+
+
+.steps {
+	&__prev {
+		font-size: 15px;
+	}
+}
