@@ -22,25 +22,32 @@ const stepsForm = () => {
 
 	// Следующий шаг
 	nextStep.addEventListener('click', (event) => {
+		stepsTab[countTab].querySelectorAll('.form__radio input').forEach((input) => {
+			if (input.checked) {
+				if (!form.classList.contains('finish')) {
+					event.preventDefault()
+				} else {
+					event.stopPropagation()
+				}
+				stepsTab.forEach((step) => step.classList.remove('active'))
+				if (countTab < stepsTab.length - 1) {
+					countTab++;
+				} else {
+					countTab = stepsTab.length - 1
+				}
+				form.classList.remove('start')
+				stepsTab[countTab].classList.remove('active')
+				stepsTab[countTab].classList.add('active')
+				if (countTab === stepsTab.length - 1) {
+					form.classList.add('finish')
+					nextStep.textContent = 'Отправить'
+				} 
+			} else {
+				event.preventDefault()
+			}
+		})
+
 		
-		if (!form.classList.contains('finish')) {
-			event.preventDefault()
-		} else {
-			event.stopPropagation()
-		}
-		stepsTab.forEach((step) => step.classList.remove('active'))
-		if (countTab < stepsTab.length - 1) {
-			countTab++;
-		} else {
-			countTab = stepsTab.length - 1
-		}
-		form.classList.remove('start')
-		stepsTab[countTab].classList.remove('active')
-		stepsTab[countTab].classList.add('active')
-		if (countTab === stepsTab.length - 1) {
-			form.classList.add('finish')
-			nextStep.textContent = 'Отправить'
-		} 
 	})
 
 	// Предыдущий шаг

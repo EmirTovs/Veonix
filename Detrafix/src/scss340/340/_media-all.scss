@@ -3,6 +3,23 @@ body {
 	font-size: 14px;
 }
 
+.notification {
+	bottom: 20px;
+	transform: translate(-50%, calc(100% + 40px));
+	max-width: 95%;
+	padding: 15px;
+	backdrop-filter: blur(10px);
+	flex-direction: column;
+	gap: 30px;
+	font-size: 14px;
+	line-height: 1.4;
+	&__btn {
+		width: 100%;
+		height: 40px;
+		font-size: 14px;
+	}
+}
+
 .section {
 	&__title {
 		margin-bottom: 30px;

@@ -196,7 +196,7 @@
 
 
 .why {
-	padding: 85px 0px 83px;
+	padding: 50px 0px 83px;
 	background-repeat: no-repeat;
 	background-size: auto 100%;
 	background-position: left top;
@@ -212,6 +212,7 @@
 	.section {
 		&__title {
 			margin: 0 auto 30px;
+			padding-top: 35px;
 			color: $blue;
 			span {
 				&::before {

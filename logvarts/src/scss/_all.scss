@@ -52,9 +52,9 @@ $pink: #FF83B7;
 
 body {
 	color: $text-color;
-	&::-webkit-scrollbar {
-		display: none;
-	}
+	// &::-webkit-scrollbar {
+	// 	display: none;
+	// }
 }
 
 .container {

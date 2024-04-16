@@ -181,4 +181,5 @@ document.addEventListener('DOMContentLoaded', () => {
         window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.querySelector('head').insertAdjacentHTML('beforeend', '<link rel="shortcut icon" href="assets/img/favicon-w.png" type="image/x-icon">')
         }
+        $("[type='tel']").mask("+7(999) 999-9999");
 });

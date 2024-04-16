@@ -1,16 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
+    if (!localStorage.getItem('notificationShown')) {
+        // Создание элемента плашки
+        const notification = document.querySelector('.notification');
+      
+        // Добавление кнопки "Хорошо" на плашку
+        const closeBtn = document.querySelector('.notification__close');
+      
+      
+        // Анимация появления плашки
+        notification.style.transform = 'translate(-50%, 100%)';
+        notification.style.opacity = '0';
+      
+        setTimeout(() => {
+          notification.style.transform = 'translate(-50%, 0)';
+          notification.style.opacity = '1';
+        }, 1000);
+      
+        // Закрытие плашки по клику на кнопку "Хорошо"
+        closeBtn.addEventListener('click', () => {
+          notification.style.transform = 'translate(-50%, 100%)';
+          notification.style.opacity = '0';
+          localStorage.setItem('notificationShown', true);
+        });
+      } else {
+        document.querySelector('.notification').remove()
+      }
     scrollClass()
     modalShow()
-    document.querySelector('body').style.overflow = 'hidden';
-    setTimeout(() => {
-        var preloader = document.getElementById('preloader');
-        preloader.classList.add('active');
-        document.querySelector('body').style.overflow = null;
+    
         if (window.pageY !== 0) {
             window.scrollTo(0, 0); // Прокрутка вверх перед инициализацией анимаций
         }
-    }, 1000)
-    setTimeout(() => {
         // Якорные ссылки
         // const header = document.querySelector('.header');
         
@@ -41,6 +61,17 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.features__next').addEventListener('click', () => {
                 featuresSlider.go('>')
             })
+        }
+
+        if (document.querySelector('.cloud__slider')) {
+            const featuresSlider = new Splide('.cloud__slider', {
+                perPage: 1,
+                perMove: 1,
+                pagination: false,
+                arrows: false,
+                autoplay: true,
+                type: 'loop',
+            }).mount()
         }
 
         if (document.querySelector('.cases__slider')) {
@@ -95,7 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
 
         
-    }, 900)
 
     
     const lazyLoad = new LazyLoad({
@@ -129,4 +159,5 @@ document.addEventListener('DOMContentLoaded', () => {
           });
       
       })
+      
 });

@@ -294,10 +294,10 @@
 
 .why {
 	position: relative;
-	padding: 480px 0px 213px;
+	padding: 400px 0px 213px;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
-	background-position: top center;
+	background-position: top -10px center;
 	z-index: 1;
 	&::before {
 		content: '';
@@ -318,6 +318,7 @@
 		&__title {
 			position: relative;
 			margin: 0 auto 108px;
+			padding-top: 80px;
 			max-width: fit-content;
 			color: #fff;
 			span {
@@ -672,7 +673,7 @@
 
 .author {
 	position: relative;
-	padding: 5px 0px 435px;
+	padding: 0px 0px 430px;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 	background-position: top center;
@@ -731,7 +732,8 @@
 	}
 	&__list {
 		position: relative;
-		margin-bottom: 148px;
+		margin-bottom: 145px;
+		padding-top: 3px;
 		display: flex;
 		gap: 132px;
 		z-index: 1;
@@ -748,7 +750,7 @@
 	}
 	&__name {
 		position: relative;
-		margin-top: -170px;
+		margin-top: -165px;
 		margin-left: auto;
 		padding: 55px 81px;
 		max-width: 470px;
@@ -800,7 +802,7 @@
 		}
 	}
 	&__item {
-		margin-bottom: 112px;
+		margin-bottom: 110px;
 		display: flex;
 		gap: 50px;
 		justify-content: space-between;
@@ -878,7 +880,7 @@
 .ped {
 	position: relative;
 	margin-top: -250px;
-	padding: 407px 0px 630px;
+	padding: 415px 0px 630px;
 	mask: url('../img/ped/bg.svg') no-repeat center;
 	mask-size: 100% auto;
 	background-image: linear-gradient(135deg, #648CF6 10%, #F7F8FF 100%);
@@ -887,7 +889,7 @@
 	overflow: hidden;
 	&__bottom {
 		position: relative;
-		margin-top: -550px;
+		margin-top: -605px;
 		z-index: -1;
 		img {
 			width: 100%;
@@ -1010,7 +1012,7 @@
 }
 
 .review {
-	margin-top: -62px;
+	margin-top: -9vw;
 	padding: 50px 0px 316px;
 	overflow: hidden;
 	video {

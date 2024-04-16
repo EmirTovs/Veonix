@@ -202,6 +202,30 @@
 			height: auto;
 		}
 	}
+	&__pc {
+		width: 100%;
+		height: auto;
+	}
+	&__slider {
+		margin-left: 5px;
+		padding-left: 2.38889vw;
+		padding-bottom: 50px;
+		width: 100%;
+		max-width: calc(100% - 2.5vw);
+		img {
+			width: 100%;
+			height: auto;
+		}
+		.splide {
+			&__track {
+				max-width: calc(100% - 2.5vw);
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
 }
 
 
